@@ -34,12 +34,28 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 16),
               CupertinoButton(
-                onPressed: () {},
+                onPressed: () {
+                  List<CarModel> cars = [];
+                  for (var value in CarModel.allCars) {
+                    if (value.difficulty == "medium") {
+                      cars.add(value);
+                    }
+                  }
+                  Get.to(QuizPage(cars: cars));
+                },
                 child: Text("MEDIUM"),
               ),
               SizedBox(height: 16),
               CupertinoButton(
-                onPressed: () {},
+                onPressed: () {
+                  List<CarModel> cars = [];
+                  for (var value in CarModel.allCars) {
+                    if (value.difficulty == "easy") {
+                      cars.add(value);
+                    }
+                  }
+                  Get.to(QuizPage(cars: cars));
+                },
                 child: Text("EASY"),
               ),
             ],
