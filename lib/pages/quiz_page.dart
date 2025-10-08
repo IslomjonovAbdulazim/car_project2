@@ -25,7 +25,10 @@ class _QuizPageState extends State<QuizPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(widget.cars[currentQuestion].url),
+                SizedBox(
+                  height: 300,
+                  child: Image.network(widget.cars[currentQuestion].url),
+                ),
                 Text(
                   widget.cars[currentQuestion].name,
                   style: GoogleFonts.nunito(
